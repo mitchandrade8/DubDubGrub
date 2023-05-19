@@ -15,6 +15,7 @@
 		74F6E4E92A17F9EA006219F2 /* LocationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E4E82A17F9EA006219F2 /* LocationMapView.swift */; };
 		74F6E4EB2A17FA08006219F2 /* LocationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E4EA2A17FA08006219F2 /* LocationListView.swift */; };
 		74F6E4ED2A17FA25006219F2 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E4EC2A17FA25006219F2 /* ProfileView.swift */; };
+		74F6E4EF2A180375006219F2 /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E4EE2A180375006219F2 /* LocationDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		74F6E4E82A17F9EA006219F2 /* LocationMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapView.swift; sourceTree = "<group>"; };
 		74F6E4EA2A17FA08006219F2 /* LocationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListView.swift; sourceTree = "<group>"; };
 		74F6E4EC2A17FA25006219F2 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		74F6E4EE2A180375006219F2 /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				74F6E4E62A17F9B4006219F2 /* AppTabView.swift */,
 				74F6E4E82A17F9EA006219F2 /* LocationMapView.swift */,
 				74F6E4EA2A17FA08006219F2 /* LocationListView.swift */,
+				74F6E4EE2A180375006219F2 /* LocationDetailView.swift */,
 				74F6E4EC2A17FA25006219F2 /* ProfileView.swift */,
 				742FF78A2A17DD3100644C7C /* Assets.xcassets */,
 				742FF78C2A17DD3100644C7C /* Preview Content */,
@@ -154,6 +157,7 @@
 				742FF7872A17DD2F00644C7C /* DubDubGrubApp.swift in Sources */,
 				74F6E4E92A17F9EA006219F2 /* LocationMapView.swift in Sources */,
 				74F6E4EB2A17FA08006219F2 /* LocationListView.swift in Sources */,
+				74F6E4EF2A180375006219F2 /* LocationDetailView.swift in Sources */,
 				74F6E4E72A17F9B4006219F2 /* AppTabView.swift in Sources */,
 				74F6E4ED2A17FA25006219F2 /* ProfileView.swift in Sources */,
 				74F6E4E52A17F952006219F2 /* Color+Ext.swift in Sources */,
