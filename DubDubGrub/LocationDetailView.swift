@@ -15,74 +15,77 @@ struct LocationDetailView: View {
     ]
     
     var body: some View {
-        NavigationView {
-            VStack(spacing: 16) {
-                Image("default-banner-asset")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(height: 120)
+        
+        VStack(spacing: 16) {
+            Image("default-banner-asset")
+                .resizable()
+                .scaledToFill()
+                .frame(height: 120)
+            
+            HStack {
+                Label("123 Main Street", systemImage: "mappin.and.ellipse")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
                 
-                HStack {
-                    Label("123 Main Street", systemImage: "mappin.and.ellipse")
-                        .font(.caption)
-                        .foregroundColor(.secondary)
-                    
-                    Spacer()
-                }
+                Spacer()
+            }
+            .padding(.horizontal)
+            
+            Text("This is a text description. This is a text description. This is a text description. This is a text description. This is a text description.")
+                .lineLimit(3)
+                .minimumScaleFactor(0.75)
+                .frame(height: 70)
                 .padding(.horizontal)
+            
+            ZStack {
+                Capsule()
+                    .frame(height: 80)
+                    .foregroundColor(Color(uiColor: .secondarySystemBackground))
                 
-                Text("This is a text description. This is a text description. This is a text description. This is a text description. This is a text description.")
-                    .lineLimit(3)
-                    .minimumScaleFactor(0.75)
-                    .padding(.horizontal)
-                
-                ZStack {
-                    Capsule()
-                        .frame(height: 80)
-                        .foregroundColor(Color(uiColor: .secondarySystemBackground))
+                HStack(spacing: 20) {
+                    Button {
+                        
+                    } label: {
+                        LocationActionButton(color: .brandPrimary, imageName: "location.fill")
+                    }
                     
-                    HStack(spacing: 20) {
-                        Button {
-                            
-                        } label: {
-                            LocationActionButton(color: .brandPrimary, imageName: "location.fill")
-                        }
+                    Link(destination: URL(string: "https://aaple.com")!, label: {
+                        LocationActionButton(color: .brandPrimary, imageName: "network")
+                    })
+                    
+                    Button {
                         
-                        Link(destination: URL(string: "https://aaple.com")!, label: {
-                            LocationActionButton(color: .brandPrimary, imageName: "network")
-                        })
-                       
-                        Button {
-                            
-                        } label: {
-                            LocationActionButton(color: .brandPrimary, imageName: "phone.fill")
-                        }
+                    } label: {
+                        LocationActionButton(color: .brandPrimary, imageName: "phone.fill")
+                    }
+                    
+                    Button {
                         
-                        Button {
-                            
-                        } label: {
-                            LocationActionButton(color: .brandPrimary, imageName: "person.fill.checkmark")
-                        }
+                    } label: {
+                        LocationActionButton(color: .brandPrimary, imageName: "person.fill.checkmark")
                     }
                 }
-                .padding(.horizontal)
-                
-                Text("Who's Here?")
-                    .bold()
-                    .font(.title2)
-                
+            }
+            .padding(.horizontal)
+            
+            Text("Who's Here?")
+                .bold()
+                .font(.title2)
+            
+            ScrollView {
                 LazyVGrid(columns: columns, content: {
                     FirstNameAvatarView(firstName: "Lebron")
                     FirstNameAvatarView(firstName: "Kyrie")
                     FirstNameAvatarView(firstName: "Kawhi")
                 })
-                
-                Spacer()
             }
-            .navigationTitle("Location Name")
-            .navigationBarTitleDisplayMode(.inline)
+            
+            Spacer()
         }
+        .navigationTitle("Location Name")
+        .navigationBarTitleDisplayMode(.inline)
     }
+    
 }
 
 struct LocationDetailView_Previews: PreviewProvider {
