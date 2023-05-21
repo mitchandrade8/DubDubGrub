@@ -10,11 +10,25 @@ import SwiftUI
 struct LocationDetailView: View {
     var body: some View {
         NavigationView {
-            VStack {
+            VStack(spacing: 16) {
                 Image("default-banner-asset")
                     .resizable()
                     .scaledToFill()
                     .frame(height: 120)
+                
+                HStack {
+                    Label("123 Main Street", systemImage: "mappin.and.ellipse")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                    
+                    Spacer()
+                }
+                .padding(.horizontal)
+                
+                Text("This is a text description. This is a text description. This is a text description. This is a text description. This is a text description.")
+                    .lineLimit(3)
+                    .minimumScaleFactor(0.75)
+                    .padding(.horizontal)
                 
                 Spacer()
             }
