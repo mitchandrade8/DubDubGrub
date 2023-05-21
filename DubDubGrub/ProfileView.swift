@@ -53,6 +53,14 @@ struct ProfileView: View {
                 .padding()
             }
             
+            VStack {
+                Text("Bio: 100 Characters Remain")
+                
+                TextEditor(text: $bio)
+                    .frame(height: 100)
+                    .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.secondary, lineWidth: 1))
+            }
+            
             Spacer()
         }
         .navigationTitle("Profile")
