@@ -9,7 +9,18 @@ import SwiftUI
 
 struct LocationDetailView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                Image("default-banner-asset")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(height: 120)
+                
+                Spacer()
+            }
+            .navigationTitle("Location Name")
+            .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 
