@@ -21,6 +21,7 @@
 		74F6E4F52A1AC936006219F2 /* CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E4F42A1AC936006219F2 /* CustomModifiers.swift */; };
 		74F6E4F72A1AC98D006219F2 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E4F62A1AC98D006219F2 /* View+Ext.swift */; };
 		74F6E4F92A1ADD26006219F2 /* DDGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E4F82A1ADD26006219F2 /* DDGButton.swift */; };
+		74F6E5012A1D53EA006219F2 /* DDGLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E5002A1D53EA006219F2 /* DDGLocation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		74F6E4F42A1AC936006219F2 /* CustomModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifiers.swift; sourceTree = "<group>"; };
 		74F6E4F62A1AC98D006219F2 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 		74F6E4F82A1ADD26006219F2 /* DDGButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGButton.swift; sourceTree = "<group>"; };
+		74F6E5002A1D53EA006219F2 /* DDGLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		742FF7852A17DD2F00644C7C /* DubDubGrub */ = {
 			isa = PBXGroup;
 			children = (
+				74F6E4FF2A1D53D1006219F2 /* Model */,
 				74F6E4FA2A1ADEF0006219F2 /* Extensions */,
 				74F6E4FB2A1ADF02006219F2 /* Views */,
 				74F6E4E32A17F2B2006219F2 /* DubDubGrub.entitlements */,
@@ -137,6 +140,14 @@
 				74F6E4F82A1ADD26006219F2 /* DDGButton.swift */,
 			);
 			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		74F6E4FF2A1D53D1006219F2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				74F6E5002A1D53EA006219F2 /* DDGLocation.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +225,7 @@
 				74F6E4E92A17F9EA006219F2 /* LocationMapView.swift in Sources */,
 				74F6E4EB2A17FA08006219F2 /* LocationListView.swift in Sources */,
 				74F6E4F32A1AC5E3006219F2 /* AvatarView.swift in Sources */,
+				74F6E5012A1D53EA006219F2 /* DDGLocation.swift in Sources */,
 				74F6E4EF2A180375006219F2 /* LocationDetailView.swift in Sources */,
 				74F6E4E72A17F9B4006219F2 /* AppTabView.swift in Sources */,
 				74F6E4F72A1AC98D006219F2 /* View+Ext.swift in Sources */,
