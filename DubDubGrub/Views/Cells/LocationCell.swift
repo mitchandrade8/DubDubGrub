@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LocationCell: View {
     
-    
+    var location: DDGLocation
     
     var body: some View {
         HStack {
@@ -21,7 +21,7 @@ struct LocationCell: View {
                 .padding(.vertical, 8)
             
             VStack(alignment: .leading) {
-                Text("Test Location Name")
+                Text(location.name)
                     .font(.title2)
                     .fontWeight(.semibold)
                     .frame(width: 170)
@@ -43,6 +43,6 @@ struct LocationCell: View {
 
 struct LocationCell_Previews: PreviewProvider {
     static var previews: some View {
-        LocationCell()
+        LocationCell(location: DDGLocation(record: MockData.location))
     }
 }

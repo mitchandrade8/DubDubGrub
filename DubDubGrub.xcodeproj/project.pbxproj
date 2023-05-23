@@ -22,6 +22,8 @@
 		74F6E4F72A1AC98D006219F2 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E4F62A1AC98D006219F2 /* View+Ext.swift */; };
 		74F6E4F92A1ADD26006219F2 /* DDGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E4F82A1ADD26006219F2 /* DDGButton.swift */; };
 		74F6E5012A1D53EA006219F2 /* DDGLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E5002A1D53EA006219F2 /* DDGLocation.swift */; };
+		74F6E5032A1D57D7006219F2 /* DDGProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E5022A1D57D7006219F2 /* DDGProfile.swift */; };
+		74F6E5052A1D5A3D006219F2 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E5042A1D5A3D006219F2 /* MockData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		74F6E4F62A1AC98D006219F2 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 		74F6E4F82A1ADD26006219F2 /* DDGButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGButton.swift; sourceTree = "<group>"; };
 		74F6E5002A1D53EA006219F2 /* DDGLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGLocation.swift; sourceTree = "<group>"; };
+		74F6E5022A1D57D7006219F2 /* DDGProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGProfile.swift; sourceTree = "<group>"; };
+		74F6E5042A1D5A3D006219F2 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				74F6E5002A1D53EA006219F2 /* DDGLocation.swift */,
+				74F6E5022A1D57D7006219F2 /* DDGProfile.swift */,
+				74F6E5042A1D5A3D006219F2 /* MockData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -224,7 +230,9 @@
 				74F6E4F52A1AC936006219F2 /* CustomModifiers.swift in Sources */,
 				74F6E4E92A17F9EA006219F2 /* LocationMapView.swift in Sources */,
 				74F6E4EB2A17FA08006219F2 /* LocationListView.swift in Sources */,
+				74F6E5052A1D5A3D006219F2 /* MockData.swift in Sources */,
 				74F6E4F32A1AC5E3006219F2 /* AvatarView.swift in Sources */,
+				74F6E5032A1D57D7006219F2 /* DDGProfile.swift in Sources */,
 				74F6E5012A1D53EA006219F2 /* DDGLocation.swift in Sources */,
 				74F6E4EF2A180375006219F2 /* LocationDetailView.swift in Sources */,
 				74F6E4E72A17F9B4006219F2 /* AppTabView.swift in Sources */,
