@@ -10,6 +10,7 @@
 		742FF7872A17DD2F00644C7C /* DubDubGrubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742FF7862A17DD2F00644C7C /* DubDubGrubApp.swift */; };
 		742FF78B2A17DD3100644C7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 742FF78A2A17DD3100644C7C /* Assets.xcassets */; };
 		742FF78E2A17DD3100644C7C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 742FF78D2A17DD3100644C7C /* Preview Assets.xcassets */; };
+		749A0C782A1EB448000C15D5 /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749A0C772A1EB448000C15D5 /* XDismissButton.swift */; };
 		74F6E4E52A17F952006219F2 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E4E42A17F952006219F2 /* Color+Ext.swift */; };
 		74F6E4E72A17F9B4006219F2 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E4E62A17F9B4006219F2 /* AppTabView.swift */; };
 		74F6E4E92A17F9EA006219F2 /* LocationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E4E82A17F9EA006219F2 /* LocationMapView.swift */; };
@@ -31,6 +32,8 @@
 		74F6E5122A1DDED5006219F2 /* LocationMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E5112A1DDED5006219F2 /* LocationMapViewModel.swift */; };
 		74F6E5152A1DE50B006219F2 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E5142A1DE50B006219F2 /* LocationManager.swift */; };
 		74F6E5172A1E8D9D006219F2 /* CKAsset+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E5162A1E8D9D006219F2 /* CKAsset+Ext.swift */; };
+		74F6E51A2A1EAA77006219F2 /* OnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E5192A1EAA77006219F2 /* OnboardView.swift */; };
+		74F6E51C2A1EAAE1006219F2 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E51B2A1EAAE1006219F2 /* LogoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,7 @@
 		742FF7862A17DD2F00644C7C /* DubDubGrubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DubDubGrubApp.swift; sourceTree = "<group>"; };
 		742FF78A2A17DD3100644C7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		742FF78D2A17DD3100644C7C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		749A0C772A1EB448000C15D5 /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
 		74F6E4E32A17F2B2006219F2 /* DubDubGrub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DubDubGrub.entitlements; sourceTree = "<group>"; };
 		74F6E4E42A17F952006219F2 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		74F6E4E62A17F9B4006219F2 /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 		74F6E5142A1DE50B006219F2 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		74F6E5162A1E8D9D006219F2 /* CKAsset+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CKAsset+Ext.swift"; sourceTree = "<group>"; };
 		74F6E5182A1E9B11006219F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		74F6E5192A1EAA77006219F2 /* OnboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardView.swift; sourceTree = "<group>"; };
+		74F6E51B2A1EAAE1006219F2 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +119,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		749A0C762A1EB438000C15D5 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				749A0C772A1EB448000C15D5 /* XDismissButton.swift */,
+				74F6E4F82A1ADD26006219F2 /* DDGButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 		74F6E4FB2A1ADF02006219F2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +147,7 @@
 				74F6E4EA2A17FA08006219F2 /* LocationListView.swift */,
 				74F6E4EE2A180375006219F2 /* LocationDetailView.swift */,
 				74F6E4EC2A17FA25006219F2 /* ProfileView.swift */,
+				74F6E5192A1EAA77006219F2 /* OnboardView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -147,8 +163,9 @@
 		74F6E4FE2A1ADF4B006219F2 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				749A0C762A1EB438000C15D5 /* Buttons */,
 				74F6E4F22A1AC5E3006219F2 /* AvatarView.swift */,
-				74F6E4F82A1ADD26006219F2 /* DDGButton.swift */,
+				74F6E51B2A1EAAE1006219F2 /* LogoView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -286,12 +303,15 @@
 				74F6E4EF2A180375006219F2 /* LocationDetailView.swift in Sources */,
 				74F6E4E72A17F9B4006219F2 /* AppTabView.swift in Sources */,
 				74F6E5092A1D84C3006219F2 /* CloudKitManager.swift in Sources */,
+				74F6E51C2A1EAAE1006219F2 /* LogoView.swift in Sources */,
+				749A0C782A1EB448000C15D5 /* XDismissButton.swift in Sources */,
 				74F6E50F2A1D92F0006219F2 /* AlertItem.swift in Sources */,
 				74F6E4F72A1AC98D006219F2 /* View+Ext.swift in Sources */,
 				74F6E4ED2A17FA25006219F2 /* ProfileView.swift in Sources */,
 				74F6E50D2A1D89DC006219F2 /* CKRecord+Ext.swift in Sources */,
 				74F6E5152A1DE50B006219F2 /* LocationManager.swift in Sources */,
 				74F6E5172A1E8D9D006219F2 /* CKAsset+Ext.swift in Sources */,
+				74F6E51A2A1EAA77006219F2 /* OnboardView.swift in Sources */,
 				74F6E4F92A1ADD26006219F2 /* DDGButton.swift in Sources */,
 				74F6E4F12A1AC5A6006219F2 /* LocationCell.swift in Sources */,
 				74F6E4E52A17F952006219F2 /* Color+Ext.swift in Sources */,
