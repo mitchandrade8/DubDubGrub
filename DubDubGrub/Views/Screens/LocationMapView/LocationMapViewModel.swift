@@ -10,12 +10,12 @@ import SwiftUI
 
 final class LocationMapViewModel: NSObject, ObservableObject {
     
+    @Published var isShowingOnboardView = true
     @Published var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 40.388274,
                                 longitude: -104.716802),
         span: MKCoordinateSpan(latitudeDelta: 0.03,
                                longitudeDelta: 0.03))
-    
     @Published var alertItem: AlertItem?
     
     var deviceLocationManager: CLLocationManager?
