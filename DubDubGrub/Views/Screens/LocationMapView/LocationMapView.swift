@@ -10,18 +10,14 @@ import SwiftUI
 
 struct LocationMapView: View {
     
-    @State private var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 40.388274,
-                                longitude: -104.716802),
-        span: MKCoordinateSpan(latitudeDelta: 0.03,
-                               longitudeDelta: 0.03))
-    
-    @State private var alertItem: AlertItem?
+    @EnvironmentObject private var locationManager: LocationManager
+    @StateObject private var viewModel = LocationMapViewModel()
     
     var body: some View {
         ZStack {
-            Map(coordinateRegion: $region)
-                .ignoresSafeArea()
+            Map(mapRect: $viewModel.region, annotationItems: locationManager.locations) { location in
+                
+            }
             
             VStack {
                 LogoView()
@@ -30,17 +26,12 @@ struct LocationMapView: View {
                 Spacer()
             }
         }
-        .alert(item: $alertItem, content: { alertItem in
+        .alert(item: $viewModel.alertItem, content: { alertItem in
             Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dismissButton)
         })
         .onAppear {
-            CloudKitManager.getLocations { result in
-                switch result {
-                case .success(let locations):
-                    print(locations)
-                case .failure(_):
-                    alertItem = AlertContext.unableToGetLocations
-                }
+            if locationManager.locations.isEmpty {
+                viewModel.getLocations(for: locationManager)
             }
         }
     }
