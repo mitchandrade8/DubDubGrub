@@ -16,6 +16,8 @@ struct LocationMapView: View {
         span: MKCoordinateSpan(latitudeDelta: 0.03,
                                longitudeDelta: 0.03))
     
+    @State private var alertItem: AlertItem?
+    
     var body: some View {
         ZStack {
             Map(coordinateRegion: $region)
@@ -28,13 +30,16 @@ struct LocationMapView: View {
                 Spacer()
             }
         }
+        .alert(item: $alertItem, content: { alertItem in
+            Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dismissButton)
+        })
         .onAppear {
             CloudKitManager.getLocations { result in
                 switch result {
                 case .success(let locations):
                     print(locations)
-                case .failure(let error):
-                    print(error.localizedDescription)
+                case .failure(_):
+                    alertItem = AlertContext.unableToGetLocations
                 }
             }
         }
