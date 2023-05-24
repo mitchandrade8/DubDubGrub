@@ -15,9 +15,10 @@ struct LocationMapView: View {
     
     var body: some View {
         ZStack {
-            Map(mapRect: $viewModel.region, annotationItems: locationManager.locations) { location in
-                
+            Map(coordinateRegion: $viewModel.region, annotationItems: locationManager.locations) { location in
+                MapMarker(coordinate: location.location.coordinate, tint: .brandPrimary)
             }
+            .ignoresSafeArea()
             
             VStack {
                 LogoView()
