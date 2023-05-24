@@ -10,7 +10,7 @@ import SwiftUI
 
 final class LocationMapViewModel: NSObject, ObservableObject {
     
-    @Published var isShowingOnboardView = true
+    @Published var isShowingOnboardView = false
     @Published var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 40.388274,
                                 longitude: -104.716802),
@@ -19,6 +19,20 @@ final class LocationMapViewModel: NSObject, ObservableObject {
     @Published var alertItem: AlertItem?
     
     var deviceLocationManager: CLLocationManager?
+    let kHasSeenOnboardView = "hasSeenOnboardView"
+    
+    var hasSeenOnboardView: Bool {
+        return UserDefaults.standard.bool(forKey: kHasSeenOnboardView)
+    }
+    
+    func runStartupChecks() {
+        if !hasSeenOnboardView {
+            isShowingOnboardView = true
+            UserDefaults.standard.set(true, forKey: kHasSeenOnboardView)
+        } else {
+            checkIfLocationServiceIsEnabled()
+        }
+    }
     
     func checkIfLocationServiceIsEnabled() {
         if CLLocationManager.locationServicesEnabled() {
