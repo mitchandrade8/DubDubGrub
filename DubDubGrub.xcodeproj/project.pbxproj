@@ -30,6 +30,7 @@
 		74F6E50F2A1D92F0006219F2 /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E50E2A1D92F0006219F2 /* AlertItem.swift */; };
 		74F6E5122A1DDED5006219F2 /* LocationMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E5112A1DDED5006219F2 /* LocationMapViewModel.swift */; };
 		74F6E5152A1DE50B006219F2 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E5142A1DE50B006219F2 /* LocationManager.swift */; };
+		74F6E5172A1E8D9D006219F2 /* CKAsset+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E5162A1E8D9D006219F2 /* CKAsset+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		74F6E50E2A1D92F0006219F2 /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
 		74F6E5112A1DDED5006219F2 /* LocationMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapViewModel.swift; sourceTree = "<group>"; };
 		74F6E5142A1DE50B006219F2 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		74F6E5162A1E8D9D006219F2 /* CKAsset+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CKAsset+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 				74F6E4E42A17F952006219F2 /* Color+Ext.swift */,
 				74F6E4F62A1AC98D006219F2 /* View+Ext.swift */,
 				74F6E50C2A1D89DC006219F2 /* CKRecord+Ext.swift */,
+				74F6E5162A1E8D9D006219F2 /* CKAsset+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				74F6E4ED2A17FA25006219F2 /* ProfileView.swift in Sources */,
 				74F6E50D2A1D89DC006219F2 /* CKRecord+Ext.swift in Sources */,
 				74F6E5152A1DE50B006219F2 /* LocationManager.swift in Sources */,
+				74F6E5172A1E8D9D006219F2 /* CKAsset+Ext.swift in Sources */,
 				74F6E4F92A1ADD26006219F2 /* DDGButton.swift in Sources */,
 				74F6E4F12A1AC5A6006219F2 /* LocationCell.swift in Sources */,
 				74F6E4E52A17F952006219F2 /* Color+Ext.swift in Sources */,
