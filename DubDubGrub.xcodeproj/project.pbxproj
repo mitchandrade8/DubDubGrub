@@ -128,6 +128,13 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
+		749A0C792A202624000C15D5 /* UIKit Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "UIKit Components";
+			sourceTree = "<group>";
+		};
 		74F6E4FB2A1ADF02006219F2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +170,7 @@
 		74F6E4FE2A1ADF4B006219F2 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				749A0C792A202624000C15D5 /* UIKit Components */,
 				749A0C762A1EB438000C15D5 /* Buttons */,
 				74F6E4F22A1AC5E3006219F2 /* AvatarView.swift */,
 				74F6E51B2A1EAAE1006219F2 /* LogoView.swift */,
