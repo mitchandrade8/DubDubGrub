@@ -121,7 +121,7 @@ struct ProfileView: View {
                 }
                 
                 // Create reference on UserRecord to the DDGProfile we created
-                userRecord["userProfile"] = CKRecord.Reference(recordID: profileRecord.recordID, action: .deleteSelf)
+                userRecord["userProfile"] = CKRecord.Reference(recordID: profileRecord.recordID, action: .none)
                 
                 // Create a CKOperation to save our User and Profile records
                 let operation = CKModifyRecordsOperation(recordsToSave: [userRecord, profileRecord])
