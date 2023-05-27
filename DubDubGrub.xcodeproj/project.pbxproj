@@ -145,8 +145,8 @@
 		749A0C7E2A217C18000C15D5 /* ProfileView */ = {
 			isa = PBXGroup;
 			children = (
-				74F6E4EC2A17FA25006219F2 /* ProfileView.swift */,
 				749A0C7F2A217C4A000C15D5 /* ProfileViewModel.swift */,
+				74F6E4EC2A17FA25006219F2 /* ProfileView.swift */,
 			);
 			path = ProfileView;
 			sourceTree = "<group>";
