@@ -8,6 +8,10 @@
 import CloudKit
 import SwiftUI
 
+enum ProfileContext {
+    case create, update
+}
+
 final class ProfileViewModel: ObservableObject {
     
     @Published var firstName = ""
@@ -18,6 +22,9 @@ final class ProfileViewModel: ObservableObject {
     @Published var isShowingPhotoPicker = false
     @Published var isLoading = false
     @Published var alertItem: AlertItem?
+    
+    var existingProfileRecord: CKRecord?
+    var profileContext: ProfileContext = .create
     
     func isValidProfile() -> Bool {
         
@@ -53,12 +60,16 @@ final class ProfileViewModel: ObservableObject {
                 hideLoadingView()
                 
                 switch result {
-                case .success(_):
+                case .success(let records):
+                    for record in records where record.recordType == RecordType.profile {
+                        existingProfileRecord = record
+                        profileContext = .update
+                    }
                     alertItem = AlertContext.createProfileSuccess
                     
                 case .failure(_):
                     alertItem = AlertContext.createProfileFailure
-                    
+                    break
                 }
             }
         }
@@ -84,6 +95,7 @@ final class ProfileViewModel: ObservableObject {
                 
                 switch result {
                 case .success(let record):
+                    existingProfileRecord = record
                     let profile = DDGProfile(record: record)
                     firstName = profile.firstName
                     lastName = profile.lastName
@@ -94,6 +106,38 @@ final class ProfileViewModel: ObservableObject {
                 case .failure(_):
                     alertItem = AlertContext.unableToGetProfile
                     
+                }
+            }
+        }
+    }
+    
+    func updateProfile() {
+        guard isValidProfile() else {
+            alertItem = AlertContext.invalidProfile
+            return
+        }
+        
+        guard let profileRecord = existingProfileRecord else {
+            alertItem = AlertContext.unableToGetProfile
+            return
+        }
+        
+        profileRecord[DDGProfile.kFirstName] = firstName
+        profileRecord[DDGProfile.kLastName] = lastName
+        profileRecord[DDGProfile.kCompanyName] = companyName
+        profileRecord[DDGProfile.kBio] = bio
+        profileRecord[DDGProfile.kAvatar] = avatar.convertToCKAsset()
+        
+        showLoadingView()
+        CloudKitManager.shared.save(record: profileRecord) { result in
+            DispatchQueue.main.async { [self] in
+                hideLoadingView()
+                
+                switch result {
+                case .success(_):
+                    alertItem = AlertContext.updateProfileSuccess
+                case .failure(_):
+                    alertItem = AlertContext.updateProfileFailure
                 }
             }
         }
