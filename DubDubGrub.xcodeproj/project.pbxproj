@@ -147,6 +147,7 @@
 			children = (
 				749A0C7F2A217C4A000C15D5 /* ProfileViewModel.swift */,
 				74F6E4EC2A17FA25006219F2 /* ProfileView.swift */,
+				74F6E5102A1DDE58006219F2 /* LocationMapView */,
 			);
 			path = ProfileView;
 			sourceTree = "<group>";
@@ -166,7 +167,6 @@
 			isa = PBXGroup;
 			children = (
 				749A0C7E2A217C18000C15D5 /* ProfileView */,
-				74F6E5102A1DDE58006219F2 /* LocationMapView */,
 				74F6E4E62A17F9B4006219F2 /* AppTabView.swift */,
 				74F6E4EA2A17FA08006219F2 /* LocationListView.swift */,
 				74F6E4EE2A180375006219F2 /* LocationDetailView.swift */,
