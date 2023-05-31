@@ -14,6 +14,7 @@
 		749A0C7B2A2026C1000C15D5 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749A0C7A2A2026C1000C15D5 /* PhotoPicker.swift */; };
 		749A0C7D2A210BF5000C15D5 /* UIImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749A0C7C2A210BF5000C15D5 /* UIImage+Ext.swift */; };
 		749A0C802A217C4A000C15D5 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749A0C7F2A217C4A000C15D5 /* ProfileViewModel.swift */; };
+		749A0C822A27E348000C15D5 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749A0C812A27E348000C15D5 /* LoadingView.swift */; };
 		74F6E4E52A17F952006219F2 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E4E42A17F952006219F2 /* Color+Ext.swift */; };
 		74F6E4E72A17F9B4006219F2 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E4E62A17F9B4006219F2 /* AppTabView.swift */; };
 		74F6E4E92A17F9EA006219F2 /* LocationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E4E82A17F9EA006219F2 /* LocationMapView.swift */; };
@@ -48,6 +49,7 @@
 		749A0C7A2A2026C1000C15D5 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		749A0C7C2A210BF5000C15D5 /* UIImage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ext.swift"; sourceTree = "<group>"; };
 		749A0C7F2A217C4A000C15D5 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		749A0C812A27E348000C15D5 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		74F6E4E32A17F2B2006219F2 /* DubDubGrub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DubDubGrub.entitlements; sourceTree = "<group>"; };
 		74F6E4E42A17F952006219F2 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		74F6E4E62A17F9B4006219F2 /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				749A0C762A1EB438000C15D5 /* Buttons */,
 				74F6E4F22A1AC5E3006219F2 /* AvatarView.swift */,
 				74F6E51B2A1EAAE1006219F2 /* LogoView.swift */,
+				749A0C812A27E348000C15D5 /* LoadingView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				74F6E5172A1E8D9D006219F2 /* CKAsset+Ext.swift in Sources */,
 				74F6E51A2A1EAA77006219F2 /* OnboardView.swift in Sources */,
 				74F6E4F92A1ADD26006219F2 /* DDGButton.swift in Sources */,
+				749A0C822A27E348000C15D5 /* LoadingView.swift in Sources */,
 				749A0C7D2A210BF5000C15D5 /* UIImage+Ext.swift in Sources */,
 				74F6E4F12A1AC5A6006219F2 /* LocationCell.swift in Sources */,
 				74F6E4E52A17F952006219F2 /* Color+Ext.swift in Sources */,
