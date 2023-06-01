@@ -66,6 +66,7 @@ final class ProfileViewModel: ObservableObject {
                     for record in records where record.recordType == RecordType.profile {
                         existingProfileRecord = record
                         profileContext = .update
+                        CloudKitManager.shared.profileRecordID = record.recordID
                     }
                     alertItem = AlertContext.createProfileSuccess
                     
