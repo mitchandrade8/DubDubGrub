@@ -23,7 +23,9 @@ final class ProfileViewModel: ObservableObject {
     @Published var isLoading = false
     @Published var alertItem: AlertItem?
     
-    var existingProfileRecord: CKRecord?
+    var existingProfileRecord: CKRecord? {
+        didSet { profileContext = .update }
+    }
     var profileContext: ProfileContext = .create
     
     func isValidProfile() -> Bool {
