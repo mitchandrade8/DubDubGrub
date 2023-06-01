@@ -15,7 +15,9 @@ enum CheckInStatus {
 
 final class LocationDetailViewModel: ObservableObject {
     
+    @Published var checkedInProfiles: [DDGProfile] = []
     @Published var alertItem: AlertItem?
+    @Published var isCheckedIn = false
     @Published var isShowingProfileModal = false
     
     let columns = [GridItem(.flexible()),
@@ -66,17 +68,41 @@ final class LocationDetailViewModel: ObservableObject {
                 
                 // Save the updatedd profile to CloudKit
                 CloudKitManager.shared.save(record: record) { result in
-                    switch result {
-                    case .success(let success):
-                        // update our checkedInProfiles array
-                        print("✅ Checked In/Out Successfully")
-                    case .failure(let failure):
-                        print("❌ Error saving record")
+                    let profile = DDGProfile(record: record)
+                    DispatchQueue.main.async {
+                        switch result {
+                        case .success(let success):
+                            switch checkInStatus {
+                            case .checkedIn:
+                                checkedInProfiles.append(profile)
+                            case .checkedOut:
+                                checkedInProfiles.removeAll(where: { $0.id == profile.id })
+                            }
+                            
+                            isCheckedIn = checkInStatus == .checkedIn
+                            
+                            print("✅ Checked In/Out Successfully")
+                        case .failure(let failure):
+                            print("❌ Error saving record")
+                        }
                     }
                 }
                 
             case .failure(_):
                 print("❌ Error fetching record")
+            }
+        }
+    }
+    
+    func getCheckedInProfiles() {
+        CloudKitManager.shared.getCheckedInProfiles(for: location.id) { result in
+            DispatchQueue.main.async { [self] in
+                switch result {
+                case .success(let profiles):
+                    checkedInProfiles = profiles
+                case .failure(_):
+                    print("Error fetching checkedIn profiles")
+                }
             }
         }
     }
