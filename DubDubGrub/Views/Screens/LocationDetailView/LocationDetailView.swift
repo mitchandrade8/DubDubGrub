@@ -32,7 +32,7 @@ struct LocationDetailView: View {
                 
                 HStack(spacing: 20) {
                     Button {
-                        
+                        viewModel.getDirectionsToLocation()
                     } label: {
                         LocationActionButton(color: .brandPrimary, imageName: "location.fill")
                     }
@@ -42,7 +42,7 @@ struct LocationDetailView: View {
                     })
                     
                     Button {
-                        
+                        viewModel.callLocation()
                     } label: {
                         LocationActionButton(color: .brandPrimary, imageName: "phone.fill")
                     }
@@ -70,6 +70,9 @@ struct LocationDetailView: View {
             
             Spacer()
         }
+        .alert(item: $viewModel.alertItem, content: { alertItem in
+            Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dismissButton)
+        })
         .navigationTitle(viewModel.location.name)
         .navigationBarTitleDisplayMode(.inline)
     }
