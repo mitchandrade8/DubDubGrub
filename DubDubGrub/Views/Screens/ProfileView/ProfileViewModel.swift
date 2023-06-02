@@ -21,6 +21,7 @@ final class ProfileViewModel: ObservableObject {
     @Published var avatar = PlaceholderImage.avatar
     @Published var isShowingPhotoPicker = false
     @Published var isLoading = false
+    @Published var isCheckedIn = false
     @Published var alertItem: AlertItem?
     
     var existingProfileRecord: CKRecord? {
@@ -38,6 +39,42 @@ final class ProfileViewModel: ObservableObject {
               bio.count <= 100 else { return false }
         
         return true
+    }
+    
+    func getCheckedInStatus() {
+        guard let profileRecordID = CloudKitManager.shared.profileRecordID else { return }
+        
+        CloudKitManager.shared.fetchRecord(with: profileRecordID) { [self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let record):
+                    if let _ = record[DDGProfile.kIsCheckedIn] as? CKRecord.Reference {
+                        isCheckedIn = true
+                    } else {
+                        isCheckedIn = false
+                    }
+                    
+                case .failure(_):
+                    break
+                }
+            }
+        }
+    }
+    
+    func checkOut() {
+        guard let profileID = CloudKitManager.shared.profileRecordID else {
+            // show alert
+            return
+        }
+        
+        CloudKitManager.shared.fetchRecord(with: profileID) { result in
+            switch result {
+            case .success(let record):
+                break
+            case .failure(_):
+                break
+            }
+        }
     }
     
     func createProfile() {
