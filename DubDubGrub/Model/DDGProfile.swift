@@ -16,6 +16,7 @@ struct DDGProfile: Identifiable {
     static let kCompanyName = "companyName"
     static let kBio = "bio"
     static let kIsCheckedIn = "isCheckedIn"
+    static let kIsCheckedInNilCheck = "isCheckedInNilCheck"
     
     let id: CKRecord.ID
     let firstName: String
