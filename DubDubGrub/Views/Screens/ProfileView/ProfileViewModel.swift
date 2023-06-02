@@ -63,16 +63,29 @@ final class ProfileViewModel: ObservableObject {
     
     func checkOut() {
         guard let profileID = CloudKitManager.shared.profileRecordID else {
-            // show alert
+            alertItem = AlertContext.unableToGetProfile
             return
         }
         
         CloudKitManager.shared.fetchRecord(with: profileID) { result in
             switch result {
             case .success(let record):
-                break
+                record[DDGProfile.kIsCheckedIn] = nil
+                
+                CloudKitManager.shared.save(record: record) { [self] result in
+                    DispatchQueue.main.async {
+                        switch result {
+                        case .success(_):
+                            isCheckedIn = false
+                        case .failure(_):
+                            alertItem = AlertContext.unableToCheckInOrOut
+                        }
+                    }
+                }
             case .failure(_):
-                break
+                DispatchQueue.main.async { [self] in
+                    alertItem = AlertContext.unableToCheckInOrOut
+                }
             }
         }
     }
