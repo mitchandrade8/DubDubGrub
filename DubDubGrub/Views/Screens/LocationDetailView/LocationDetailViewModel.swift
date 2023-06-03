@@ -86,6 +86,7 @@ final class LocationDetailViewModel: ObservableObject {
                     record[DDGProfile.kIsCheckedInNilCheck] = 1
                 case .checkedOut:
                     record[DDGProfile.kIsCheckedIn] = nil
+                    record[DDGProfile.kIsCheckedInNilCheck] = nil
                 }
                 
                 // Save the updatedd profile to CloudKit
