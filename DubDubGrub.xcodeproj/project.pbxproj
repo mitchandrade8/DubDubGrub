@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		742687BD2A2E9609000C5830 /* AppTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742687BC2A2E9609000C5830 /* AppTabViewModel.swift */; };
 		742FF7872A17DD2F00644C7C /* DubDubGrubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742FF7862A17DD2F00644C7C /* DubDubGrubApp.swift */; };
 		742FF78B2A17DD3100644C7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 742FF78A2A17DD3100644C7C /* Assets.xcassets */; };
 		742FF78E2A17DD3100644C7C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 742FF78D2A17DD3100644C7C /* Preview Assets.xcassets */; };
@@ -19,6 +20,7 @@
 		74A235D32A2905520086EE02 /* ProfileModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A235D22A2905520086EE02 /* ProfileModalView.swift */; };
 		74EB59522A2B997E00FC7909 /* LocationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EB59512A2B997E00FC7909 /* LocationListViewModel.swift */; };
 		74EB59552A2D45F800FC7909 /* MapBalloon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EB59542A2D45F800FC7909 /* MapBalloon.swift */; };
+		74EB59572A2E8BE400FC7909 /* DDGAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EB59562A2E8BE400FC7909 /* DDGAnnotation.swift */; };
 		74F6E4E52A17F952006219F2 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E4E42A17F952006219F2 /* Color+Ext.swift */; };
 		74F6E4E72A17F9B4006219F2 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E4E62A17F9B4006219F2 /* AppTabView.swift */; };
 		74F6E4E92A17F9EA006219F2 /* LocationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F6E4E82A17F9EA006219F2 /* LocationMapView.swift */; };
@@ -45,6 +47,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		742687BC2A2E9609000C5830 /* AppTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabViewModel.swift; sourceTree = "<group>"; };
 		742FF7832A17DD2F00644C7C /* DubDubGrub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DubDubGrub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		742FF7862A17DD2F00644C7C /* DubDubGrubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DubDubGrubApp.swift; sourceTree = "<group>"; };
 		742FF78A2A17DD3100644C7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,6 +61,7 @@
 		74A235D22A2905520086EE02 /* ProfileModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModalView.swift; sourceTree = "<group>"; };
 		74EB59512A2B997E00FC7909 /* LocationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListViewModel.swift; sourceTree = "<group>"; };
 		74EB59542A2D45F800FC7909 /* MapBalloon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBalloon.swift; sourceTree = "<group>"; };
+		74EB59562A2E8BE400FC7909 /* DDGAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGAnnotation.swift; sourceTree = "<group>"; };
 		74F6E4E32A17F2B2006219F2 /* DubDubGrub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DubDubGrub.entitlements; sourceTree = "<group>"; };
 		74F6E4E42A17F952006219F2 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		74F6E4E62A17F9B4006219F2 /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
@@ -96,6 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		742687BB2A2E95BA000C5830 /* AppTabView */ = {
+			isa = PBXGroup;
+			children = (
+				742687BC2A2E9609000C5830 /* AppTabViewModel.swift */,
+				74F6E4E62A17F9B4006219F2 /* AppTabView.swift */,
+			);
+			path = AppTabView;
+			sourceTree = "<group>";
+		};
 		742FF77A2A17DD2F00644C7C = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				74EB59542A2D45F800FC7909 /* MapBalloon.swift */,
+				74EB59562A2E8BE400FC7909 /* DDGAnnotation.swift */,
 			);
 			path = "Map Annotation";
 			sourceTree = "<group>";
@@ -203,10 +217,10 @@
 		74F6E4FC2A1ADF0D006219F2 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				742687BB2A2E95BA000C5830 /* AppTabView */,
 				74EB59502A2B990F00FC7909 /* LocationListView */,
 				749A0C832A28F7A9000C15D5 /* LocationDetailView */,
 				749A0C7E2A217C18000C15D5 /* ProfileView */,
-				74F6E4E62A17F9B4006219F2 /* AppTabView.swift */,
 				74F6E5192A1EAA77006219F2 /* OnboardView.swift */,
 			);
 			path = Screens;
@@ -357,6 +371,7 @@
 				74F6E5052A1D5A3D006219F2 /* MockData.swift in Sources */,
 				74F6E4F32A1AC5E3006219F2 /* AvatarView.swift in Sources */,
 				74F6E5032A1D57D7006219F2 /* DDGProfile.swift in Sources */,
+				742687BD2A2E9609000C5830 /* AppTabViewModel.swift in Sources */,
 				74F6E5012A1D53EA006219F2 /* DDGLocation.swift in Sources */,
 				749A0C7B2A2026C1000C15D5 /* PhotoPicker.swift in Sources */,
 				74F6E4EF2A180375006219F2 /* LocationDetailView.swift in Sources */,
@@ -368,6 +383,7 @@
 				74F6E4F72A1AC98D006219F2 /* View+Ext.swift in Sources */,
 				74F6E4ED2A17FA25006219F2 /* ProfileView.swift in Sources */,
 				74A235D32A2905520086EE02 /* ProfileModalView.swift in Sources */,
+				74EB59572A2E8BE400FC7909 /* DDGAnnotation.swift in Sources */,
 				74F6E50D2A1D89DC006219F2 /* CKRecord+Ext.swift in Sources */,
 				74EB59522A2B997E00FC7909 /* LocationListViewModel.swift in Sources */,
 				74F6E5152A1DE50B006219F2 /* LocationManager.swift in Sources */,
