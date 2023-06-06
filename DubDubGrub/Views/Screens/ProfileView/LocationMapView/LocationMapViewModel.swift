@@ -20,6 +20,7 @@ final class LocationMapViewModel: ObservableObject {
                                longitudeDelta: 0.03))
     @Published var alertItem: AlertItem?
 
+    
     func getLocations(for locationManager: LocationManager) {
         CloudKitManager.shared.getLocations { [self] result in
             DispatchQueue.main.async {
@@ -32,6 +33,7 @@ final class LocationMapViewModel: ObservableObject {
             }
         }
     }
+    
     
     func getCheckedInCounts() {
         CloudKitManager.shared.getCheckedInProfilesCount { result in

@@ -22,7 +22,6 @@ struct LocationListView: View {
                     }
                 }
             }
-            
             .listStyle(.plain)
             .navigationTitle("Hoop Spots")
             .onAppear {

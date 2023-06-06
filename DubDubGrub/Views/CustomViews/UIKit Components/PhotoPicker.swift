@@ -19,13 +19,16 @@ struct PhotoPicker: UIViewControllerRepresentable {
         return picker
     }
     
+    
     func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) {
         
     }
     
+    
     func makeCoordinator() -> Coordinator {
         Coordinator(photoPicker: self)
     }
+    
     
     final class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
         

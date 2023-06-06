@@ -27,7 +27,9 @@ final class ProfileViewModel: ObservableObject {
     var existingProfileRecord: CKRecord? {
         didSet { profileContext = .update }
     }
+    
     var profileContext: ProfileContext = .create
+    
     
     func isValidProfile() -> Bool {
         
@@ -40,6 +42,7 @@ final class ProfileViewModel: ObservableObject {
         
         return true
     }
+    
     
     func getCheckedInStatus() {
         guard let profileRecordID = CloudKitManager.shared.profileRecordID else { return }
@@ -60,6 +63,7 @@ final class ProfileViewModel: ObservableObject {
             }
         }
     }
+    
     
     func checkOut() {
         guard let profileID = CloudKitManager.shared.profileRecordID else {
@@ -90,6 +94,7 @@ final class ProfileViewModel: ObservableObject {
             }
         }
     }
+    
     
     func createProfile() {
         guard isValidProfile() else {
@@ -129,6 +134,7 @@ final class ProfileViewModel: ObservableObject {
         }
     }
     
+    
     func getProfile() {
         
         guard let userRecord = CloudKitManager.shared.userRecord else {
@@ -165,6 +171,7 @@ final class ProfileViewModel: ObservableObject {
         }
     }
     
+    
     func updateProfile() {
         guard isValidProfile() else {
             alertItem = AlertContext.invalidProfile
@@ -196,6 +203,7 @@ final class ProfileViewModel: ObservableObject {
             }
         }
     }
+    
     
     private func createProfileRecord() -> CKRecord {
         let profileRecord = CKRecord(recordType: RecordType.profile)

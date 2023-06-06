@@ -32,6 +32,7 @@ final class LocationDetailViewModel: ObservableObject {
         self.location = location
     }
     
+    
     func getDirectionsToLocation() {
         let placemark = MKPlacemark(coordinate: location.location.coordinate)
         let mapItem = MKMapItem(placemark: placemark)
@@ -39,6 +40,7 @@ final class LocationDetailViewModel: ObservableObject {
         
         mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking])
     }
+    
     
     func callLocation() {
         guard let url = URL(string: "tel://\(location.phoneNumber)") else {
@@ -48,6 +50,7 @@ final class LocationDetailViewModel: ObservableObject {
         
         UIApplication.shared.open(url)
     }
+    
     
     func getCheckedInStatus() {
         guard let profileRecordID = CloudKitManager.shared.profileRecordID else { return }
@@ -68,6 +71,7 @@ final class LocationDetailViewModel: ObservableObject {
             }
         }
     }
+    
     
     func updateCheckInStatus(to checkInStatus: CheckInStatus) {
         // Retrieve the DDGProfile
