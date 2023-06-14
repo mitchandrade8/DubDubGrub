@@ -31,6 +31,7 @@ struct LocationMapView: View {
             VStack {
                 LogoView(frameWidth: 125)
                     .shadow(radius: 10)
+                    .accessibilityHidden(true)
                 
                 Spacer()
             }
